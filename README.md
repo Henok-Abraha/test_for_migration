@@ -34,15 +34,15 @@ Performance data would also be collected over a representative monitoring period
 
 I would investigate all 5 servers.
 
-For WEB-01 I would investigate the IIS web server and the user interface including the configurations and dependencies of the server.
+For WEB-01 i would investigate the IIS web server and the user interface including the configurations and dependencies of the server.
 
-For APP-01 I would investigate the application running on the server and investigate its configuration.
+For APP-01 i would investigate the application running on the server and investigate its configuration.
 
-For DB-01 I would investigate the SQL Server workload, including the SQL Server version, databases, storage requirements, performance, and connections from other systems.
+For DB-01 i would investigate the SQL Server workload, including the SQL Server version, databases, storage requirements, performance, and connections from other systems.
 
-For DC-01 I would investigate the Active Directory services and identify which servers depend on it for authentication, DNS and identity services.
+For DC-01 i would investigate the Active Directory services and identify which servers depend on it for authentication, DNS and identity services.
 
-Finally, for FILE-01 I would investigate the file shares, storage usage, permissions, and systems or users that access the files.
+Finally, for FILE-01 i would investigate the file shares, storage usage, permissions, and systems or users that access the files.
 
 ### Additional Information Needed
 
