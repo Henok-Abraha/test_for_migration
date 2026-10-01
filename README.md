@@ -10,11 +10,11 @@
 
 ### 1. Digital Estate Understanding
 
-- By digital estate means knowing all the technology assets that you have and use in your organization. This technology assets are applications, VMs, data and ect..
+ - By digital estate means knowing all the technology assets that you have and use in your organization. This technology assets are applications, VMs, data and ect..
 
-- Before migration knowing our Digital estate is important and it's the first thing we do before planning our cloud migration. The reason for this is first we have to know what we have on our premises so we can plan our migration to the cloud.
+ - Before migration knowing our Digital estate is important and it's the first thing we do before planning our cloud migration. The reason for this is first we have to know what we have on our premises so we can plan our migration to the cloud.
 
-- We have a tool called Azure Migrate appliance which is a component of Azure Migrate which helps us with our estimate assessment. If we do our migration without adequate discovery and assessment there will be risks of whether on premises machines are ready to migrate to the cloud, we will not have an estimate of how many or the sizes of the VMs we need on the cloud and we will not have an estimate of what the cost will be migrate and use the cloud.
+ - We have a tool called Azure Migrate appliance which is a component of Azure Migrate which helps us with our estimate assessment. If we do our migration without adequate discovery and assessment there will be risks of whether on premises machines are ready to migrate to the cloud, we will not have an estimate of how many or the sizes of the VMs we need on the cloud and we will not have an estimate of what the cost will be migrate and use the cloud.
 
 For this mid-sized organization we where given the on premises environment information which are all the 5 servers that they have and basic info about them like name, operating system and roles. This information would not be enough and risky to migrate tehm to the cloud.
 
