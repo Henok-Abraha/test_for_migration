@@ -18,34 +18,77 @@
 
 For this mid-sized organization we where given the on premises environment information which are all the 5 servers that they have and basic info about them like name, operating system and roles. This information would not be enough and risky to migrate tehm to the cloud.
 
+## 2. Discovery and Assessment Approach
+
+When a company is planning to migrate to the cloud we use the Azure Migrate appliance. Most organizations use VMware vCenter which is a management system used to manage the VM. This mid-sized organization has 5 servers and probably they are managed by the vCenter. When we use the Azure Migrate appliance we dont connect them to each VM but to the vCenter.
+
+Azure Migrate is a tool used to discover and assess the VMs environment. I would use the Azure Migrate appliance.
+
+### Configuration and Performance Information
+
+The configuration information i would collect is for each 5 servers including CPU, memory, storage configuration, utilization, application versions.
+
+Performance data would also be collected over a representative monitoring period, including average and peak CPU and memory utilization, disk I/O, storage utilization, and network traffic. This information would help determine Azure readiness and appropriately size Azure Virtual Machines.
+
+### Servers and Workloads
+
+I would investigate all 5 servers.
+
+For **WEB-01** I would investigate the IIS web server and the user interface including the configurations and dependencies of the server.
+
+For **APP-01**, I would investigate the application running on the server and investigate its configuration.
+
+For **DB-01**, I would investigate the SQL Server workload, including the SQL Server version, databases, storage requirements, performance, and connections from other systems.
+
+For **DC-01**, I would investigate the Active Directory services and identify which servers depend on it for authentication, DNS and identity services.
+
+Finally, for **FILE-01**, I would investigate the file shares, storage usage, permissions, and systems or users that access the files.
+
+### Additional Information Needed
+
+To complete the migration assessment, I would need additional information from the organization. This would include the **CPU, memory, and storage configuration** of each server, as well as their **CPU and memory utilization, disk IOPS, throughput, and network usage**.
+
+Plus i would require additional info on the business side like for how long the applications or website can be unavailable during migration.
+
+### Discovery vs Assessment
+
+**Discovery** is when we identify the servers, applications, configurations, performance and dependencies that the organization has on premises.
+
+**Assessment** is when we use the information that we collected during discovery to check if the servers are ready and suitable to migrate to Azure.
 
 
+## 3. Dependency Analysis
 
-### 3. Dependency Analysis
-
-#### - Confirmed Dependency
+### Confirmed Dependency
 
 Based on the information provided, the only confirmed dependency is that **APP-01 depends on DB-01**. The application server needs the SQL Server database to access and store application data.
 
 Other possible dependencies would need to be investigated before migration.
 
-#### - Assumed Dependencies
+### Assumed Dependencies
 
 The following dependencies are possible but are **not confirmed by the provided information** and would need to be investigated:
 
-- **WEB-01 -> APP-01:** The IIS web server may communicate with the application server to process requests.
-- **Other servers -> FILE-01:** Applications or users may depend on FILE-01 for shared files or data.
+- **WEB-01 → APP-01:** The IIS web server may communicate with the application server to process requests.
+- **Other servers → FILE-01:** Applications or users may depend on FILE-01 for shared files or data.
 
-#### - Dependency Analysis and Risk of Outages
+### Dependency Analysis and Risk of Outages
 
 Dependency analysis reduces the risk by showing which servers and applications rely on each other. This helps the migration team understand which systems need to remain connected and plan the correct migration order.
 
-#### - Validating Assumed Dependencies
+### Validating Assumed Dependencies
 
 To validate the assumed dependencies, first I would use the Azure **Migrate appliance** to discover the VMware environment and collect information about the servers.
 
 I would use dependency analysis to identify communication between servers, including which machines communicate with each other and the network connections between them.
 
+### Migration Group
+
+I would put **APP-01 and DB-01 in the same migration group** because APP-01 has a confirmed dependency on DB-01. Migrating them together would help make sure APP-01 can still connect to DB-01 and reduce the risk of downtime.
+
+### Dependency Diagram
+
+![Dependency Diagram](images/Dependency_Diagram.png)
 
 #### Dependency Diagram (Mermaid)
 
