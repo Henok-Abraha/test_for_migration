@@ -63,21 +63,21 @@ I would use dependency analysis to identify communication between servers, inclu
 
 ### 5. Sizing and Cost Considerations
 
-#### 1. Azure Migrate Sizing and Cost Estimation
+#### - Azure Migrate Sizing and Cost Estimation
 
 After the on premisses servers are marked as ready for Azure, the Azure Migrate appliance tool makes sizing recommendations that identify the Azure VM SKU, disk type for your machines and based on the performance history. Based on the Azure VM sizing needed the Azure Migrate appliance tool estimates the cost estimation.
 
-#### 2. Performance-Based Sizing and As-Is Sizing
+#### - Performance-Based Sizing and As-Is Sizing
 
 Performance-based sizing uses the **actual utilization and performance data** collected from the servers, such as CPU and memory usage.
 
 As-is sizing uses the server's **current configuration** rather than its actual utilization. The Azure VM is sized based on the existing CPU, memory, storage, and other configured resources.
 
-#### 3. Configuration and Utilization Data
+#### - Configuration and Utilization Data
 
 To recommend appropriate Azure VM sizes, I would collect both **configuration** and **utilization** data from each server, such as Number of CPU cores, Amount of RAM, Disk size and storage configuration, Network configuration and Operating system. For the **utilization** i would collect Storage usage, Network traffic and peak CPU.
 
-#### 4. Factors That Could Affect Azure Operating Cost
+#### - Factors That Could Affect Azure Operating Cost
 
 The **three factors** that could affect the estimated Azure operating cost would be the:
 
@@ -100,13 +100,13 @@ For the migration **Prioritization and Plan we will put them in 5 sections**
 
 The first step would be the preparation. By this i intend to have the digital estate of the environments. I will start by usnif the Azure Migrate Tools to identify and collect all CPU, memory, storage, performance, application, and dependency information for all 5 servers.
 
-#### First Workload or Pilot
+#### - First Workload or Pilot
 
 I would choose **WEB-01** for the first test migration because it is not listed as a mission-critical server. I would migrate a test version of WEB-01 to Azure without affecting the real production server or sending users to the test server.
 
 Before testing WEB-01, I would first check its dependencies. For example, if WEB-01 depends on APP-01 or another server, I would make sure the connection can be tested safely without affecting the production systems.
 
-#### Migration Order
+#### - Migration Order
 
 WEB-01 would be migrated first as a test to make sure the migration process works correctly. After that, FILE-01 could be migrated after checking its old operating system and its dependencies.
 
@@ -114,11 +114,11 @@ WEB-01 would be migrated first as a test to make sure the migration process work
 
 DC-01 could be migrated after checking how the other servers depend on Active Directory, DNS and identity services. The migration order can also change if the dependency analysis finds new dependencies between the servers.
 
-#### Validation
+#### - Validation
 
 After each migration, I would verify that the VM starts correctly and that its applications and services are running. I would test network connectivity, application functionality, authentication, database connections, file access, and performance where applicable.
 
-#### Rollback
+#### - Rollback
 
 A rollback would be needed if an important service does not work after migration. For example, if APP-01 cannot connect to DB-01 or there is too much downtime.
 
