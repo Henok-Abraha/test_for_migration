@@ -23,13 +23,13 @@ For this mid-sized organization we where given the on premises environment infor
 
 ### 3. Dependency Analysis
 
-#### 1. Confirmed Dependency
+#### - Confirmed Dependency
 
 Based on the information provided, the only confirmed dependency is that **APP-01 depends on DB-01**. The application server needs the SQL Server database to access and store application data.
 
 Other possible dependencies would need to be investigated before migration.
 
-#### 2. Assumed Dependencies
+#### - Assumed Dependencies
 
 The following dependencies are possible but are **not confirmed by the provided information** and would need to be investigated:
 
