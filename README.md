@@ -33,8 +33,8 @@ Other possible dependencies would need to be investigated before migration.
 
 The following dependencies are possible but are **not confirmed by the provided information** and would need to be investigated:
 
-- **WEB-01 → APP-01:** The IIS web server may communicate with the application server to process requests.
-- **Other servers → FILE-01:** Applications or users may depend on FILE-01 for shared files or data.
+- **WEB-01 -> APP-01:** The IIS web server may communicate with the application server to process requests.
+- **Other servers -> FILE-01:** Applications or users may depend on FILE-01 for shared files or data.
 
 #### - Dependency Analysis and Risk of Outages
 
