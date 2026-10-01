@@ -47,7 +47,7 @@ To validate the assumed dependencies, first I would use the Azure **Migrate appl
 I would use dependency analysis to identify communication between servers, including which machines communicate with each other and the network connections between them.
 
 
-#### Dependency Diagram
+#### Dependency Diagram (Mermaid)
 
 ![Dependency Diagram](images/Dependency_Diagram.png)
 
@@ -129,7 +129,7 @@ In this case, I would stop the migration and move the service back to the origin
 
 ## References
 
-- Algonquin College. (2026). *Week 4: Cloud Migration Discovery and Assessment*. CST8913 Cloud Migration.  
+- Algonquin College. (2026). *Week 4: Cloud Migration Discovery and Assessment*. CST8913 Cloud Migration.
   https://brightspace.algonquincollege.com/d2l/le/content/932966/viewContent/13569286/View
 
 - Microsoft. (n.d.). *About Azure Migrate*. Microsoft Learn.  
