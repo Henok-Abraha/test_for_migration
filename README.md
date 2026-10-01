@@ -85,7 +85,7 @@ The **three factors** that could affect the estimated Azure operating cost would
 - **Storage:** The amount and type of disk storage required can affect the total cost.
 - **Usage:** which is The number of hours the VMs will be running.
 
-#### Sizing and Cost Estimates
+#### - Sizing and Cost Estimates
 
 To make an estimated **Sizing and Cost for** cloud migration for this mid sized organization wouldnt be possible because the inventory provided is insufficient. We would require more information like **CPU, memory, storage configuration, or utilization data for all 5 servers.**
 
@@ -96,7 +96,7 @@ To make an estimated **Sizing and Cost for** cloud migration for this mid sized 
 
 For the migration **Prioritization and Plan we will put them in 5 sections**
 
-#### Preparation
+#### - Preparation
 
 The first step would be the preparation. By this i intend to have the digital estate of the environments. I will start by usnif the Azure Migrate Tools to identify and collect all CPU, memory, storage, performance, application, and dependency information for all 5 servers.
 
