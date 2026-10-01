@@ -36,11 +36,11 @@ The following dependencies are possible but are **not confirmed by the provided 
 - **WEB-01 → APP-01:** The IIS web server may communicate with the application server to process requests.
 - **Other servers → FILE-01:** Applications or users may depend on FILE-01 for shared files or data.
 
-#### 3. Dependency Analysis and Risk of Outages
+#### - Dependency Analysis and Risk of Outages
 
 Dependency analysis reduces the risk by showing which servers and applications rely on each other. This helps the migration team understand which systems need to remain connected and plan the correct migration order.
 
-#### 4. Validating Assumed Dependencies
+#### - Validating Assumed Dependencies
 
 To validate the assumed dependencies, first I would use the Azure **Migrate appliance** to discover the VMware environment and collect information about the servers.
 
